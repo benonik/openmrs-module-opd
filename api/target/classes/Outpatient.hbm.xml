@@ -5,16 +5,23 @@
 
 <hibernate-mapping package="org.openmrs.module.outpatient">
 
-<!--
 	<class name="Outpatient"
 		table="outpatient_Outpatient">
-		<id name="id" type="int" column="id" unsaved-value="0">
+		<id name="PatientId" type="int" column="patient_id" unsaved-value="0">
 			<generator class="native" />
 		</id>
 		<discriminator column="id" insert="false" />
+        <property name="phoneNumber" type="java.lang.String" column="phone_number"/>
+        <property name="resident" type="java.lang.String" column="resident"/>
+        <property name="county" type="java.lang.String" column="county"/>
+        <property name="gender" type="java.lang.String" column="gender"/>
+        <property name="dateOfBirth" type="java.util.Date" column="date_of_birth"/>
+        <property name="createdBy" type="java.lang.String" column="created_by" />
+        <property name="dateCreated" type="java.util.Date" column="date_created" />
+        <property name="changedBy" type="java.lang.String" column="changed_by" />
+        <property name="dateChanged" type="java.util.Date" column="date_changed" />
 		<property name="uuid" type="java.lang.String" column="uuid"
 			length="38" unique="true" />
 	</class>
--->
 
 </hibernate-mapping>

@@ -8,5 +8,9 @@
         See http://www.liquibase.org/manual/home#available_database_refactorings
         for a list of supported elements and attributes
     -->
+    <changeSet id="10" author="benson">
+       <comment>Create outpatients table</comment>
+
+    </changeSet>
     
 </databaseChangeLog>

@@ -26,8 +26,8 @@ public class Outpatient extends BaseOpenmrsObject implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Integer id;
+	private String patientId;
 	private Integer outPatientId;
-	private String fullName;
 	private String phoneNumber;
 	private String resident;
 	private String county;
@@ -49,13 +49,8 @@ public class Outpatient extends BaseOpenmrsObject implements Serializable {
 	{
 		this.outPatientId=outPatientId;
 	}
-	public  String getfullName(){
-		return fullName;
-	}
-	public void setfullName(String fullName){
-		this.fullName=fullName;
-	}
-
+    public String getPatientId(){ return patientId; }
+    public void setPatientId(String patientId){ this.patientId=patientId;}
 	public String getPhoneNumber(){
 		return phoneNumber;
 	}
