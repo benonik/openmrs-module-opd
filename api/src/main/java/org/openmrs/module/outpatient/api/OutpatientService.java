@@ -14,7 +14,10 @@
 package org.openmrs.module.outpatient.api;
 
 import org.openmrs.api.OpenmrsService;
+import org.openmrs.module.outpatient.Outpatient;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * This service exposes module's core functionality. It is a Spring managed bean which is configured in moduleApplicationContext.xml.
@@ -23,14 +26,29 @@ import org.springframework.transaction.annotation.Transactional;
  * <code>
  * Context.getService(OutpatientService.class).someMethod();
  * </code>
- * 
+ * service for managing outpatients
  * @see org.openmrs.api.context.Context
  */
 @Transactional
 public interface OutpatientService extends OpenmrsService {
      
 	/*
-	 * Add service methods here
-	 * 
+	 *get a list of outpatients
 	 */
+    @Transactional(readOnly = true)
+    List<Outpatient> getAllOutpatient();
+
+/*get outpatient for a given ID
+*
+ */
+    @Transactional(readOnly = true)
+    Outpatient getOutpatient(Integer outPatientId);
+    /*save an existing patient
+    *
+     */
+    Outpatient saveOutpatient(Outpatient outpatient);
+    /*deletes an outpatient from the database
+    8
+     */
+    void purgeOutpatient(Outpatient outpatient);
 }

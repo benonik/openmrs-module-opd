@@ -24,14 +24,11 @@ import java.util.Date;
 public class Outpatient extends BaseOpenmrsObject implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
-	private Integer id;
-	private String patientId;
 	private Integer outPatientId;
+	private String name;
 	private String phoneNumber;
 	private String resident;
 	private String county;
-	private String gender;
 	private Date dateOfBirth;
 
 	/*change and creation meta-data*/
@@ -42,15 +39,18 @@ public class Outpatient extends BaseOpenmrsObject implements Serializable {
 	private Date  dateChanged;
 
 	//setters and getters
-	public Integer getOutpatientId(){
-		return outPatientId;
+   public Integer getOutPatientId(){
+       return outPatientId;
+   }
+    public void setOutPatientId(Integer outPatientId){
+        this.outPatientId=outPatientId;
+    }
+	public String getName(){
+		return name;
 	}
-	public void setOutPatientId(Integer outPatientId)
-	{
-		this.outPatientId=outPatientId;
+	public void setName(String name){
+		this.name=name;
 	}
-    public String getPatientId(){ return patientId; }
-    public void setPatientId(String patientId){ this.patientId=patientId;}
 	public String getPhoneNumber(){
 		return phoneNumber;
 	}
@@ -69,12 +69,6 @@ public class Outpatient extends BaseOpenmrsObject implements Serializable {
 	public void setCounty(String county){
 		this.county=county;
 	}
-	public String getGender(){
-		return gender;
-	}
-	public void setGender(String gender){
-		this.gender=gender;
-	}
 	public Date getDateOfBirth(){
 		return dateOfBirth;
 	}
@@ -86,8 +80,8 @@ public class Outpatient extends BaseOpenmrsObject implements Serializable {
 	public String getCreatedBy(){
 		return createdBy;
 	}
-	public void setCreatedBy(String changedBy){
-		this.changedBy=changedBy;
+	public void setCreatedBy(String createdBy){
+		this.createdBy=createdBy;
 	}
 	public Date getDateCreated(){
 		return dateCreated;
@@ -112,12 +106,12 @@ public class Outpatient extends BaseOpenmrsObject implements Serializable {
 
 	@Override
 	public Integer getId() {
-		return getOutpatientId();
+		return getoutPatientId();
 	}
 
 	@Override
 	public void setId(Integer id) {
-		setOutPatientId(id);
+	setoutPatientId(id);
 	}
 
 

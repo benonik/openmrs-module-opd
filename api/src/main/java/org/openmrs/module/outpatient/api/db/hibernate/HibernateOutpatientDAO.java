@@ -16,7 +16,9 @@ package org.openmrs.module.outpatient.api.db.hibernate;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.SessionFactory;
+import org.openmrs.module.outpatient.Outpatient;
 import org.openmrs.module.outpatient.api.db.OutpatientDAO;
+import java.util.List;
 
 /**
  * It is a default implementation of  {@link OutpatientDAO}.
@@ -38,5 +40,22 @@ public class HibernateOutpatientDAO implements OutpatientDAO {
      */
     public SessionFactory getSessionFactory() {
 	    return sessionFactory;
+    }
+	@Override
+	public List<Outpatient> getAllOutpatient(){
+        return sessionFactory.getCurrentSession().createCriteria(Outpatient.class).list();
+    }
+   @Override
+   public Outpatient getOutpatient(Integer outPatientId){
+       return (Outpatient)sessionFactory.getCurrentSession().get(Outpatient.class, outPatientId);
+   }
+    @Override
+    public Outpatient saveOutpatient(Outpatient outpatient){
+     sessionFactory.getCurrentSession().save(outpatient);
+        return outpatient;
+    }
+    @Override
+    public void purgeOutpatient(Outpatient outpatient){
+        sessionFactory.getCurrentSession().delete(outpatient);
     }
 }
