@@ -9,10 +9,10 @@
 	<package>org.openmrs.module.outpatient</package>
 	<author>benson/biwot/maramba</author>
 	<description>
-		module for outpatient department in hospital
+		module for automating patient services in outpatient Department
 	</description>
 	<updateURL>https://modules.openmrs.org/modules/download/outpatient/update.rdf</updateURL>
-	<require_version>1.8.0</require_version>
+	<require_version>1.8.2</require_version>
 	<!-- / Module Properties -->
 
 	

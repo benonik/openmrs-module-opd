@@ -14,5 +14,6 @@
 	<!-- Add further links here -->
 </ul>
 <h2>
-	<spring:message code="outpatient.title" />
+	<%--<spring:message code="outpatient.title" />--%>
+	OutPatient Details
 </h2>
