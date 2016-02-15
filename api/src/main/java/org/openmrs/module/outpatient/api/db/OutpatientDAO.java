@@ -13,14 +13,18 @@
  */
 package org.openmrs.module.outpatient.api.db;
 
+import org.openmrs.module.outpatient.Outpatient;
 import org.openmrs.module.outpatient.api.OutpatientService;
+import java.util.List;
 
 /**
  *  Database methods for {@link OutpatientService}.
  */
 public interface OutpatientDAO {
 	
-	/*
-	 * Add DAO methods here
-	 */
+	List<Outpatient> getAllOutpatient();
+    //gets an outpatient
+    Outpatient getOutpatient(Integer outpatientId);
+    Outpatient saveOutpatient(Outpatient outpatient);
+    void purgeOutpatient(Outpatient outpatient);
 }

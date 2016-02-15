@@ -5,16 +5,24 @@
 
 <hibernate-mapping package="org.openmrs.module.outpatient">
 
-<!--
 	<class name="Outpatient"
 		table="${project.parent.artifactId}_Outpatient">
-		<id name="id" type="int" column="id" unsaved-value="0">
+		<id name="outPatientId" type="int" column="outpatient_id" unsaved-value="0">
 			<generator class="native" />
 		</id>
-		<discriminator column="id" insert="false" />
-		<property name="uuid" type="java.lang.String" column="uuid"
-			length="38" unique="true" />
+		<discriminator column="outpatient_id" insert="false" />
+        <property name="uuid" type="java.lang.String" column="uuid"
+                  length="38" unique="true" />
+        <property name="name" type="java.lang.String" column="name"/>
+        <property name="phoneNumber" type="java.lang.String" column="phone_number"/>
+        <property name="resident" type="java.lang.String" column="resident"/>
+        <property name="county" type="java.lang.String" column="county"/>
+        <property name="dateOfBirth" type="java.util.Date" column="date_of_birth"/>
+        <property name="createdBy" type="java.lang.String" column="created_by" />
+        <property name="dateCreated" type="java.util.Date" column="date_created" />
+        <property name="changedBy" type="java.lang.String" column="changed_by" />
+        <property name="dateChanged" type="java.util.Date" column="date_changed" />
+
 	</class>
--->
 
 </hibernate-mapping>
