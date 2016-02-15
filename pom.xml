@@ -7,7 +7,7 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Outpatient Module</name>
-	<description>module for outpatient department in hospital</description>
+	<description>module for automating patient services in outpatient Department</description>
 	<url>https://wiki.openmrs.org/display/docs/Outpatient+Module+Module</url>
 	
 	<developers>
@@ -33,7 +33,7 @@
 	</modules>
 	
 	<properties>
-		<openMRSVersion>1.8.0</openMRSVersion>
+		<openMRSVersion>1.8.2</openMRSVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
