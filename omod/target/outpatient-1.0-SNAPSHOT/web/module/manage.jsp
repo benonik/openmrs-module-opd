@@ -2,7 +2,17 @@
 <%@ include file="/WEB-INF/template/header.jsp"%>
 
 <%@ include file="template/localHeader.jsp"%>
-
-<p>Hello ${user.systemId}!</p>
+<link rel="stylesheet" type="text/css" href="manage.css">
+<div id="dashboard">
+<h2>Dashboard</h2>
+<div class="dash"><a href='bla.jsp'><img src='search.gif' class='imgur'><div>Search Patient</div></a></div>
+<div class="dash"><a href='bla.jsp'><img src='patient.png' class='imgur'><div>New Patient</div></a></div>
+<div class="dash"><a href='bla.jsp'><img src='vitals.png' class='imgur'><div>Capture Vitals</div></a></div>
+<div class="dash"><a href='bla.jsp'><img src='progress.png' class='imgur'><div>Visits In Progess</div></a></div>
+<div class="dash"><a href='bla.jsp'><img src='schedule.png' class='imgur' id='scd'><div>Schedule Appointment</div></a></div>
+<div class="dash"><a href='bla.jsp'><img src='lab.png' class='imgur'><div>Lab Services</div></a></div>
+<div class="dash"><a href='bla.jsp'><img src='pharmacy.png' class='imgur'><div>Pharmacy</div></a></div>
+<div class="dash"><a href='bla.jsp'><img src='referrals.png' class='imgur'><div>Referrals</div></a></div>
+</div>
 
 <%@ include file="/WEB-INF/template/footer.jsp"%>

@@ -34,3 +34,4 @@ public class  OutpatientManageController {
 		model.addAttribute("user", Context.getAuthenticatedUser());
 	}
 }
+

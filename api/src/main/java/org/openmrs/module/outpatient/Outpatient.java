@@ -24,6 +24,7 @@ import java.util.Date;
 public class Outpatient extends BaseOpenmrsObject implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
 	private Integer outPatientId;
 	private String name;
 	private String phoneNumber;
@@ -106,12 +107,12 @@ public class Outpatient extends BaseOpenmrsObject implements Serializable {
 
 	@Override
 	public Integer getId() {
-		return getoutPatientId();
+		return getOutPatientId();
 	}
 
 	@Override
 	public void setId(Integer id) {
-	setoutPatientId(id);
+	setOutPatientId(id);
 	}
 
 

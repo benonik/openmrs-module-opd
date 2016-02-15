@@ -8,5 +8,23 @@
         See http://www.liquibase.org/manual/home#available_database_refactorings
         for a list of supported elements and attributes
     -->
+    <changeSet id="10" author="benson">
+       <comment>Create outpatients table</comment>
+      <createTable tableName="outpatient_outpatient">
+          <column name="outpatient_id" autoIncrement="true" type="int">
+              <constraints primaryKey="true" nullable="false"/>
+          </column>
+          <column name="name" type="varchar(255)"/>
+          <column name="phone_number" type="varchar(255)"/>
+          <column name="resident" type="varchar(255)"/>
+          <column name="county" type="varchar(255)"/>
+          <column name="date_of_birth" type="DATETIME"/>
+          <column name="created_by" type="varchar(255)"/>
+          <column name="date_created" type="DATETIME"/>
+          <column name="changed_by" type="varchar(255)"/>
+          <column name="date_changed"type="DATETIME"/>
+          <column name="uuid" type="char(38)"/>
+      </createTable>
+    </changeSet>
     
 </databaseChangeLog>
